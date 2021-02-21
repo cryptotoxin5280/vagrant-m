@@ -1,0 +1,10 @@
+---
+- name: Development VM Provisioning Playbook
+  hosts: all
+
+  tasks: 
+  - name: Clone 'reference' repo
+    git:
+      repo: 'git@bitbucket.org:xxx/reference.git'
+      dest: ~/reference
+      clone: yes
