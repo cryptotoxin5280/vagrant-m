@@ -34,10 +34,10 @@ Vagrant.configure(2) do |config|
     config.vm.hostname = "argo.gundam.local"
   end
 
-  # VM-2 (Yamoto)
+  # VM-2 (Yamato)
   # config.vm.define "Yamato" do |yamato|
     # config.vm.box = "hashicorp/bionic64"
-    # config.vm.hostname = "yamoto.gundam.local"
+    # config.vm.hostname = "yamato.gundam.local"
   # end
 
 end
