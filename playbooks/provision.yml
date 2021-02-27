@@ -2,9 +2,24 @@
 - name: Development VM Provisioning Playbook
   hosts: all
 
-  tasks: 
+  tasks:
+
+  - name: Download Node Version Manager (NVM)
+    shell: curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh -o install_nvm.sh
+
+  - name: Install NVM
+    shell: bash install_nvm.sh
+
+  - name: Source .profile
+    shell: source ~/.profile
+
+  - name: Install Node.js
+    shell: nvm install 14.16.0
+
   - name: Clone 'reference' repo
     git:
-      repo: 'git@bitbucket.org:xxx/reference.git'
-      dest: ~/reference
+      repo: 'git@bitbucket.org:xxx/xxx.git'
+      dest: ~/xxx
       clone: yes
+      version: development
+  
